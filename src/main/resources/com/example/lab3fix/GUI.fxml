@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab3fix.GUIController">
+   <children>
+      <VBox layoutY="490.0" prefHeight="330.0" prefWidth="621.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-21.0" AnchorPane.topAnchor="490.0">
+         <Label fx:id="sma" layoutX="5.0" layoutY="5.0" prefHeight="18.0" VBox.vgrow="ALWAYS" />
+         <Label fx:id="mft" contentDisplay="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="18.0" />
+         <Label fx:id="periodLabel" text="Период по умолчанию - 3" />
+         <Button mnemonicParsing="false" onAction="#BuildDiagram" prefHeight="25.0" prefWidth="240.0" text="Построить диаграмму" />
+         <Button mnemonicParsing="false" onAction="#onSMAButtonClick" prefHeight="25.0" prefWidth="240.0" text="Расчитать ПСС" />
+         <Button mnemonicParsing="false" onAction="#onMFTButtonClick" prefHeight="25.0" prefWidth="240.0" text="Применить медианный фильтр" />
+         <Button mnemonicParsing="false" onAction="#setPeriod" prefHeight="25.0" prefWidth="240.0" text="Установить период" />
+          <Button mnemonicParsing="false" onAction="#addData" prefHeight="25.0" prefWidth="240" text="Ввести значение" />
+         <Button mnemonicParsing="false" onAction="#inputURL" prefHeight="25.0" prefWidth="240.0" text="Загрузить данные из Сети" />
+         <Button mnemonicParsing="false" onAction="#locateFile" prefHeight="25.0" prefWidth="240.0" text="Загрузить данные из файла" />
+         <TextField fx:id="value" minWidth="-Infinity" onMouseClicked="#setFormat" prefHeight="30.0" promptText="Данные...">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin></TextField>
+         <TextField fx:id="periodInput" onMouseClicked="#setFormat" prefHeight="30.0" promptText="Период" />
+         <TextField fx:id="urlText" prefHeight="30.0" promptText="Ссылка..." />
+
+      </VBox>
+       <LineChart fx:id="chart" maxHeight="380.0" title="SMA &amp; MFT" AnchorPane.bottomAnchor="575.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <xAxis>
+               <CategoryAxis side="BOTTOM" />
+           </xAxis>
+           <yAxis>
+               <NumberAxis side="LEFT" />
+           </yAxis>
+       </LineChart>
+   </children>
+</AnchorPane>
