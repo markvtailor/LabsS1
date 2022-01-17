@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fix.HelloController">
+   <children>
+      <Button fx:id="readFile" layoutY="400.0" mnemonicParsing="false" onAction="#loadFileForAnalysis" text="Загрузить файл" />
+      <Label fx:id="probabilityValue" layoutX="285.0" layoutY="403.0" prefHeight="17.0" />
+      <BarChart fx:id="chart" layoutX="205.0" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="1319.0" title="Гистограмма отправитель/письма">
+        <xAxis>
+          <CategoryAxis animated="false" side="BOTTOM" tickLabelGap="10.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <ListView fx:id="spamersList" accessibleText="Потенциальные спамеры" layoutY="19.0" prefHeight="381.0" prefWidth="215.0" />
+      <Label text="Потенциальные спамеры: " />
+   </children>
+</AnchorPane>
