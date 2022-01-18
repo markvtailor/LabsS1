@@ -1,0 +1,9 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+# Maven
+log/
+dependency-reduced-pom.xml
+target/
+!target/Lab2Fix-2.0-FIX.jar
