@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab5fix.GUIController">
+   <children>
+      <Button fx:id="build" layoutY="150.0" mnemonicParsing="false" onAction="#buildSystem" text="Построить дом" />
+      <VBox fx:id="forFloors" layoutY="200.0" prefHeight="200.0" prefWidth="100.0" />
+      <Label layoutY="180.0" text="Этажи" />
+      <TextArea fx:id="liftSystem" editable="false" layoutY="23.0" prefHeight="118.0" prefRowCount="3" prefWidth="200.0" />
+      <Label layoutX="5.0" prefHeight="18.0" prefWidth="212.0" text="Дом, который построил Джек" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
