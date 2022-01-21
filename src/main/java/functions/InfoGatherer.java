@@ -2,6 +2,8 @@ package functions;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class InfoGatherer  {
     public ArrayList<Author> authors = new ArrayList<>();
@@ -58,6 +60,28 @@ public class InfoGatherer  {
             String probabilityString = line.replace("X-DSPAM-Probability:"," ");
             Double probabilityNumber = Double.parseDouble(probabilityString);
             totalProbability += probabilityNumber;
+        }
+    }
+    public void gatherDates(String line){
+        if(line.startsWith("Date:")){
+            String strPattern = "\\d{1,2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \\d{4}";
+            Pattern pattern = Pattern.compile(strPattern);
+            Matcher matcher = pattern.matcher(line);
+            if(authors.stream().anyMatch(author -> author.getName().equals(getLastEncounteredAuthor()))) {
+                for (Author author : authors) {
+                    if (Objects.equals(author.getName(), getLastEncounteredAuthor())) {
+                        while( matcher.find() ) {
+                            if(author.getLastMailDate() == null){
+                                author.setLastMailDate(matcher.group());
+                                author.setFirstMailDate(matcher.group());
+                            }else{
+                                author.setFirstMailDate(matcher.group());
+                            }
+
+                        }
+                    }
+                }
+            }
         }
     }
 

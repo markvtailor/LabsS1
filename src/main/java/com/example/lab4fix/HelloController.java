@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 
 import java.io.File;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 public class HelloController {
@@ -21,7 +22,7 @@ public class HelloController {
     public BarChart<String,Number> chart;
 
     @FXML
-    protected void loadFileForAnalysis() {
+    protected void loadFileForAnalysis() throws ParseException {
         InfoAnalyzer analyzer = new InfoAnalyzer();
         FileChooser chooser = new FileChooser();
         chooser.setTitle("Open File");

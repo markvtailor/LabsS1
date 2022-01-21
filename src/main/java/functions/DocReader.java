@@ -18,6 +18,7 @@ public class DocReader {
                 analyzer.gatherNamesAndMail(line);
                 analyzer.rememberLastEncounteredAuthor(line);
                 analyzer.gatherAuthorsConfidence(line);
+                analyzer.gatherDates(line);
                 analyzer.gatherProbability(line);
                 line = reader.readLine();
             }
