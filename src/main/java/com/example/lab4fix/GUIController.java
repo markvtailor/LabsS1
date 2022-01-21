@@ -15,7 +15,7 @@ import java.io.File;
 import java.text.ParseException;
 import java.util.ArrayList;
 
-public class HelloController {
+public class GUIController {
     public Label probabilityValue;
     public Button readFile;
     public ListView<String> spamersList;

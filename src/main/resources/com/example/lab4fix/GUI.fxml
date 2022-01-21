@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fix.HelloController">
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fix.GUIController">
    <children>
       <Button fx:id="readFile" layoutY="400.0" mnemonicParsing="false" onAction="#loadFileForAnalysis" text="Загрузить файл" />
       <Label fx:id="probabilityValue" layoutX="285.0" layoutY="403.0" prefHeight="17.0" />

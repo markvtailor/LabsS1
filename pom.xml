@@ -86,7 +86,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.lab4fix/com.example.lab4fix.HelloApplication</mainClass>
+                            <mainClass>com.example.lab4fix/com.example.lab4fix.GUI</mainClass>
                         </configuration>
                     </execution>
                 </executions>
