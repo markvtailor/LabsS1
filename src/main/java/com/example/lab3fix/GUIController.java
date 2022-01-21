@@ -79,8 +79,8 @@ public class GUIController {
     @FXML
     protected void setPeriod() {
         calculator.setPeriod(Integer.parseInt(periodInput.getText()));
-        if(Integer.parseInt(periodInput.getText())%2 == 0){
-            periodLabel.setText("Период не может быть четным. Установлено значение по умолчанию - 3");
+        if(Integer.parseInt(periodInput.getText()) == 0){
+            periodLabel.setText("Период не может быть меньше 1. Установлено значение по умолчанию - 3");
         }else periodLabel.setText("Период:" + periodInput.getText());
         periodInput.setText("");
     }

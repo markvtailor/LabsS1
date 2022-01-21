@@ -7,8 +7,8 @@ public class Calculator extends Input{
     int per = 3;
 
     public void setPeriod(int period){
-        if(period%2 == 0 || period < 1){
-            System.out.println("Период медианного фильтра не может быть четным. Установлено значение по умолчанию - 3");
+        if(period < 1){
+            System.out.println("Период медианного фильтра не может меньше 1. Установлено значение по умолчанию - 3");
             per = 3;
         }else{
             per = period;
