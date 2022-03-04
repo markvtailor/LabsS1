@@ -4,7 +4,7 @@ module com.example.lab5fix {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
-    requires validatorfx;
+
 
     opens com.example.lab5fix to javafx.fxml;
     exports com.example.lab5fix;

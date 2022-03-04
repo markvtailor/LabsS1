@@ -1,0 +1,3 @@
+Для запуска в консоли ввести:
+sudo xhost +
+sudo docker run -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix <ид образа>
