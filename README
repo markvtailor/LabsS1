@@ -1,3 +1,4 @@
 Для запуска в консоли ввести:
+sudo docker image build -t elevatorsfx:fxdocker .
 sudo xhost +
 sudo docker run -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix <ид образа>
